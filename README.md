@@ -1,24 +1,19 @@
 # MinifyResponse
 
-**TODO: Add description**
+The `MinifyResponse.HTML` plug takes care of minifying the response body when the response content type is text/html.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+Add `minify_response` to your list of dependencies in `mix.exs`:
 
-  1. Add `minify_response` to your list of dependencies in `mix.exs`:
+```elixir
+def deps do
+  [{:minify_response, "~> 0.1.0"}]
+end
+```
 
-    ```elixir
-    def deps do
-      [{:minify_response, "~> 0.1.0"}]
-    end
-    ```
+## Usage
 
-  2. Ensure `minify_response` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:minify_response]]
-    end
-    ```
-
+```elixir
+plug MinifyResponse.HTML
+```
