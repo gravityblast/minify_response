@@ -1,0 +1,2 @@
+defmodule MinifyResponse do
+end
